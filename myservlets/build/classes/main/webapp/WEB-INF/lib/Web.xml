@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" id="WebApp_ID" version="3.1">
+  <display-name>SL</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+  <context-param>
+    <param-name>driver</param-name>
+    <param-value>com.mysql.cj.jdbc.Driver</param-value>
+  </context-param>
+  <context-param>
+    <param-name>user</param-name>
+    <param-value>root</param-value>
+  </context-param>
+  <context-param>
+    <param-name>password</param-name>
+    <param-value>root</param-value>
+  </context-param>
+  <context-param>
+    <param-name>url</param-name>
+    <param-value>jdbc:mysql://localhost:3306/world</param-value>
+  </context-param>
+  <servlet>
+    <servlet-name>ContextDemo</servlet-name>
+    <servlet-class>com.emps.ContextDemo</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ContextDemo</servlet-name>
+    <url-pattern>/ContextDemo</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>ContextExample1</display-name>
+    <servlet-name>ContextExample1</servlet-name>
+    <servlet-class>com.emps.ContextExample1</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ContextExample1</servlet-name>
+    <url-pattern>/ContextExample1</url-pattern>
+  </servlet-mapping>
+   <servlet>
+    <description></description>
+    <display-name>ContextExample2</display-name>
+    <servlet-name>ContextExample2</servlet-name>
+    <servlet-class>com.emps.ContextExample2</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ContextExample2</servlet-name>
+    <url-pattern>/ContextExample2</url-pattern>
+  </servlet-mapping>
+  <servlet>
+<description></description>
+<display-name>ConfigDemo</display-name>
+<servlet-name>ConfigDemo</servlet-name>
+<servlet-class>com.emps.ConfigDemo</servlet-class>
+<init-param>
+<param-name>cnames</param-name>
+<param-value>JAVA,.NET,TESTING,ORACLE</param-value>
+</init-param>
+</servlet>
+<servlet-mapping>
+<servlet-name>ConfigDemo</servlet-name>
+<url-pattern>/ConfigDemo</url-pattern>
+</servlet-mapping>
+ 
+</web-app>
